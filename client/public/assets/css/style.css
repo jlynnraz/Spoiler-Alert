@@ -1,0 +1,52 @@
+/* colors
+pink ##FA83CE;
+blue #2BD1FC;
+yellow #F3EA5F;
+purple #C04DF9;
+red #FF3F3F;
+grey #404E4D;
+*/
+
+body{
+    background:#404E4D;
+}
+
+h2{
+    color: #F3EA5F;
+}
+h3{
+      color:#C04DF9;
+}
+/* header */
+header{
+    background:#1C061D;
+    font-style: italic;
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+h1{
+    font-family: 'Overpass Mono', monospace;
+    color:#FA83CE;
+    font-size:4.25em;
+    display:inline;
+    margin-left:2em;
+    -webkit-animation: glow 10s ease-in-out infinite alternate;
+    -moz-animation: glow 10s ease-in-out infinite alternate;
+    animation: glow 10s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #fff, 0 0 15px #e60073, 0 0 18px #e60073;
+    }
+    to {
+      text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px #ff4da6, 0 0 18px #ff4da6, 0 0 20px #ff4da6;
+    }
+  }
+header p{
+    color:#F1F5F2;
+    display: inline;
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 800;
+    font-size:1.5em;
+}

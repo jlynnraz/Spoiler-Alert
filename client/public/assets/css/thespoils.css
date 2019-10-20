@@ -1,0 +1,11 @@
+#discussion h2{
+    font-size:2em;
+}
+#discussionBlock{
+}
+#talk{
+    background:rgb(221, 205, 205);
+    border:black .25em solid;
+    padding:1em;
+    font-size:1.5em;
+}
