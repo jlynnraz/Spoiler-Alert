@@ -1,0 +1,53 @@
+#nameBlock img{
+    border-radius: 50%;
+    border:#1C061D .25em solid;    
+    width:10em;
+}
+#content{
+    display: grid;
+    grid-template-columns:auto 25%;
+}
+
+#nameBlock{
+    margin:1em 1em 1em 2em;
+}
+#nameBlock h2{
+    font-size:1.75em;
+    text-align: center;
+}
+#userWrapper{
+    display:flex;
+    width:80%;
+}
+
+#userProfile{
+    grid-column-start:1;
+    grid-column-end:2;
+}
+#top10,
+#bottom10{
+    margin-left:1em;
+}
+#top10 li,
+#bottom10 li{
+    font-size:1.5em;
+    color:red;
+    list-style: decimal;
+    margin-left:1.5em;
+}
+aside{
+    grid-column-start:2;
+}
+
+#userWrapper,
+aside{
+    background:rgb(168, 168, 168);
+}
+
+h3{
+    background:#1C061D;
+    color:#2BD1FC;
+    font-family: 'Overpass Mono', monospace;
+    font-size:1.25em;
+    padding:.6em .4em;
+}
