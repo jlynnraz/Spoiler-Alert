@@ -60,13 +60,13 @@ app.use(express.static("client/public"));
 
 // Routes
 // =============================================================
-<<<<<<< HEAD
+
 require("./routes/html-routes")(app);
-// require("./routes/api/movies-api-routes")(app);
+// // require("./routes/api/movies-api-routes")(app);
 require("./routes/api/post-api-routes")(app);
-=======
-require("./routes")(app);
->>>>>>> b001fb579ae6408fe3de4ed88d577913316f56ea
+
+// require("./routes")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

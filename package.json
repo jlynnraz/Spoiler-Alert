@@ -7,12 +7,9 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "mysql2": "^1.7.0",
-<<<<<<< HEAD
-    "pug": "^2.0.4",
-=======
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
->>>>>>> b001fb579ae6408fe3de4ed88d577913316f56ea
+    "pug": "^2.0.4",
     "sequelize": "^5.21.0"
   },
   "devDependencies": {},
