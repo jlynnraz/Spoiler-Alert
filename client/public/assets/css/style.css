@@ -17,6 +17,9 @@ h2{
 h3{
       color:#C04DF9;
 }
+.wrapper{
+  background:rgb(168, 168, 168);
+}
 /* main content layout */
 #contentWrapper{
   display: grid;

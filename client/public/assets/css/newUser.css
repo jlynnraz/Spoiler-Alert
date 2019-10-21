@@ -1,7 +1,19 @@
 
-#inputForm{
-    display: block;
-}
+#inputForm
 input{
     display: block;
+    height: 2em;
+    width:30em;
+    
+}
+.newUserWrapper{
+    width:45%;
+    margin:auto
+}
+.newUserWrapper h2{
+    font-size:3em;
+}
+.newUserInnerWrapper{
+    width:90%;
+    margin: auto;
 }
