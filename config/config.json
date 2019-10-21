@@ -1,8 +1,8 @@
 {
     "development": {
       "username": "root",
-      "password": "root",
-      "database": "blogger",
+      "password": "Flowerbud9",
+      "database": "spoiler_db",
       "host": "127.0.0.1",
       "port": 3306,
       "dialect": "mysql"

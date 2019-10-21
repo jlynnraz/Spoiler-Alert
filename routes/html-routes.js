@@ -3,15 +3,20 @@ const router = require("express").Router();
 var path = require("path");
 const pug = require('pug');
 
-module.exports = function (app) {
-    app.get("/", function (req, res) {
-        // console.log(req);
-        // res.render('index', { user: req.user });
-        //console.log(app);
-        console.log("testing...");
-        res.render('index', { user: req.user });
-    });
+module.exports = function(app) {
 
-    // router.route("/test").get(moviesController.addUser);
-  console.log("in routes/html-routes");
-}
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+
+  // index route loads view.html
+  app.get("/", function(req, res) {
+    //res.sendFile(path.join(__dirname, "../views/html/layout.html"));
+    res.render('index', { user: req.user });
+  });
+
+  // cms route loads cms.html
+  app.get("/posts", function(req, res) {
+    //res.sendFile(path.join(__dirname, "../views/html/index.html"));
+    res.render('index', { user: req.user });
+  });
+
+};
