@@ -33,5 +33,11 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  addUser: function (req, res) {
+    db.User.create({username:"test", password:"test"}, function (err, user){
+    });
+    console.log('test');
+    res.send(200).end();
   }
 };
