@@ -1,7 +1,7 @@
 const router = require("express").Router();
 // const moviesController = require("../controllers/spoilerController");
 var path = require("path");
-
+const pug = require('pug');
 
 module.exports = function(app) {
 
@@ -9,13 +9,14 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/layout.html"));
+    //res.sendFile(path.join(__dirname, "../views/html/layout.html"));
+    res.render('index', { user: req.user });
   });
 
   // cms route loads cms.html
   app.get("/posts", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html/index.html"));
+    //res.sendFile(path.join(__dirname, "../views/html/index.html"));
+    res.render('index', { user: req.user });
   });
 
 };
-
