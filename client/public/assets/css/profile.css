@@ -3,10 +3,6 @@
     border:#1C061D .25em solid;    
     width:10em;
 }
-#content{
-    display: grid;
-    grid-template-columns:auto 25%;
-}
 
 #nameBlock{
     margin:1em 1em 1em 2em;

@@ -1,11 +1,52 @@
 #discussion h2{
     font-size:2em;
 }
-#discussionBlock{
-}
-#talk{
+
+#commentBlock{
     background:rgb(221, 205, 205);
     border:black .25em solid;
+    display:grid;
+    grid-template-columns:1fr 33%;
+    margin:auto;
+    width:70%;
+}
+
+#talk{
+    font-size:1.05em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
     padding:1em;
-    font-size:1.5em;
+}
+
+#authorBar img{
+    border-radius:50%;
+    width:3em;
+}
+#authorBar{
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end:2
+    
+}
+#replyBar{
+    display:flex;
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top:.5em;
+}
+#talkBar{
+    grid-column-start:2;
+    grid-column-end:3;
+}
+
+#talkWrapper{
+    display:grid;
+    grid-template-columns:3em 3em 3em ;
+    grid-template-rows: 4em 3em;
+    margin:1em;
 }

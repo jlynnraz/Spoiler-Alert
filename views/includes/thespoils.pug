@@ -1,6 +1,9 @@
 -const movieTopic="John Wick"
--const authorName="I C Weiner"
--const talk="In the end of the movie John gets a new, bigger doggo!"
+-const authorName="Whisky Wolf"
+-const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
+-const trendingMovies=["Zombieland 2", "EndGame", "Spiderman: Far from home."]
+-const userRecentSpoils=["John Wick: Chapter 3 Parabellum", "Adams Family", "Joker"]
+-const recommendMovies=["Zombieland 2", "Gemini Man","Rambo: Last Blood"]
 
 #discussion
     h2 #{movieTopic}    
@@ -8,8 +11,29 @@
         //- discussion goes here
         #commentBlock
             #talk #{talk}
-            #author #{authorName}
-            button#reply reply
-            button#update update
-            button#delete delete
-    
+            #talkBar
+                #talkWrapper
+                    #authorBar
+                        img(src="../includes/11_indianna_jones.png" alt="Profile image")
+                        #author #{authorName}
+                    #replyBar    
+                        button#reply reply
+                        button#update update
+                        button#delete delete
+aside#theSpoils
+    #hot
+        h3 Whats Hot!
+        ol 
+            each trendingMovie in trendingMovies
+                li=trendingMovie
+    #recentToUser
+        h3 Your Spoils!
+        ol
+            each userRecentSpoil in userRecentSpoils
+                 li=userRecentSpoil
+    #recommends
+        h3 Check Out These Movies!
+        ol
+            each recommendMovie in recommendMovies
+               li=recommendMovie
+
