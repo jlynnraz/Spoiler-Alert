@@ -55,18 +55,20 @@ app.use(passport.session());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const path = require("path");
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", 'pug');
+
 // Static directory
 app.use(express.static("client/public"));
 
 // Routes
 // =============================================================
-
 require("./routes/html-routes")(app);
 // // require("./routes/api/movies-api-routes")(app);
 require("./routes/api/post-api-routes")(app);
 
 // require("./routes")(app);
-
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
