@@ -1,36 +1,38 @@
-extends layout.pug
+//- extends layout.pug
 
-block content
-    section#content
-        #welcome
-            h2 Welcome To Spoiler Alert!
-            p A place to talk about your favorite movies without fear of spoiling it for your friends!
-        #agreement
-            p By creating an account you agree to our terms and conditions
-        #inputForm
-            form#newUser
-                label Create a User Name!
-                input(
-                    type="text"
-                    name="userName"
-                    placeholder="Create A User Name"
-                        )
-                label Please enter your email
-                input(
-                    type="email"
-                    name="email"
-                    placeholder="Your email"
-                        )
-                label Make a Password
-                input(
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                        )
-                label Confirm Password
-                input(
-                    type="password"
-                    name="passwordConfirm"
-                    placeholder="Confirm Password"
-                        )
-                button#createNewUser Join!    
+//- block content
+//-     section#content
+        .wrapper.newUserWrapper
+            .newUserInnerWrapper
+                #welcome
+                    h2 Welcome To Spoiler Alert!
+                    p A place to talk about your favorite movies without fear of spoiling it for your friends!
+                #agreement
+                    p By creating an account you agree to our terms and conditions
+                #inputForm
+                    form#newUser
+                        label Create a User Name!
+                        input(
+                            type="text"
+                            name="userName"
+                            placeholder="Create A User Name"
+                                )
+                        label Please enter your email
+                        input(
+                            type="email"
+                            name="email"
+                            placeholder="Your email"
+                                )
+                        label Make a Password
+                        input(
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                                )
+                        label Confirm Password
+                        input(
+                            type="password"
+                            name="passwordConfirm"
+                            placeholder="Confirm Password"
+                                )
+                        button#createNewUser Join!    
