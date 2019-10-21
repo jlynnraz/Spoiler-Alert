@@ -2,11 +2,20 @@ const router = require("express").Router();
 // const moviesController = require("../controllers/spoilerController");
 var path = require("path");
 
-module.exports = function (app) {
-    // app.get("/", function (req, res) {
-    //     console.log(req);
-    //     res.render('index', { user: req.user });
-    // });
 
-    // router.route("/test").get(moviesController.addUser);
-}
+module.exports = function(app) {
+
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+
+  // index route loads view.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/html/layout.html"));
+  });
+
+  // cms route loads cms.html
+  app.get("/posts", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/html/index.html"));
+  });
+
+};
+
