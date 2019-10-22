@@ -81,5 +81,4 @@ module.exports = function (app) {
         })
         // res.render(200).end();
     });
-
 };
