@@ -1,11 +1,10 @@
--const movieTopic="John Wick"
 -const year="2014"
 -const actors=["Keanue Reeves","Ian McShane"]
 -const authorName="Whisky Wolf"
 -const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
 
 #discussion
-    h2 #{movieTopic}    
+    h2 #{spoilsInfo.name}    
     #discussionBlock
         #commentBlock
             #talk #{talk}
@@ -24,10 +23,7 @@
 #movieInfo.wrapper
 
     ul
-        li Title: #{movieTopic}
-        li Year: #{year}
-        li Staring:
-            ul
-                each actor in actors
-                    li=actor
+        li Title: #{movieInfo.Title}
+        li Year: #{movieInfo.Year}
+        li Staring: #{movieInfo.Actors}
         
