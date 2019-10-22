@@ -3,6 +3,7 @@ const router = require("express").Router();
 var path = require("path");
 const pug = require('pug');
 var axios = require('axios');
+var db = require("../models")
 
 module.exports = function(app) {
 
@@ -27,39 +28,35 @@ module.exports = function(app) {
     res.render('newUser', { user: req.user });
   });
 
-  // cms route loads cms.html
-  app.get("/posts", function(req, res) {
-    //res.sendFile(path.join(__dirname, "../views/html/index.html"));
-    res.render('index', { user: req.user });
-  });
-
   app.post("/searchresults", function(req, res) {
-    //res.sendFile(path.join(__dirname, "../views/html/index.html"));
     console.log(req.body.movieSearch)
     axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&s=${req.body.movieSearch}`).then(function(response){
-      // console.log(response.data.Search)
       var movies = response.data.Search;
-    //  for (var i = 0; i < movies.length; i++){
-    //     console.log(`Title: ${movies[i].Title} \n Year: ${movies[i].Year} \n imdbID: ${movies[i].imdbID} \n Poster: ${movies[i].Poster}\n`)
-    //   }
       res.render('searchresults', { movies: movies })
     }).catch(function(err){
       if(err) throw err
     })
-
     // res.render('searchresults', { user: req.user }).end();
   });
 
-  // app.post("/thespoils", function(req, res) {
-  //   //res.sendFile(path.join(__dirname, "../views/html/index.html"));
-  //   console.log(req.body.movieSearch)
-  //   axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&i=${req.body.}`).then(function(response){
-     
-  //   }).catch(function(err){
-  //     if(err) throw err
-  //   })
-
+  app.get("/thespoils/:id", function(req, res) {
+    axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&i=${req.params.id}`).then(function(response){
+      console.log(response.data)
+      var movieInfo = response.data;
+      db.Movie.findOrCreate({
+        where: {
+          name: movieInfo.Title
+        }, defaults:{ 
+          name: movieInfo.Title,
+          image_path: "",
+        }}).spread(function(movie, created){
+          return res.render('thespoils', { spoilsInfo: movie, movieInfo: movieInfo })
+          console.log(created)
+        })
+    }).catch(function(err){
+      if(err) throw err
+    })
     // res.render(200).end();
-  // });
+  });
 
 };
