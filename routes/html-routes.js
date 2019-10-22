@@ -33,32 +33,33 @@ module.exports = function(app) {
     res.render('index', { user: req.user });
   });
 
-  app.post("/search", function(req, res) {
+  app.post("/searchresults", function(req, res) {
     //res.sendFile(path.join(__dirname, "../views/html/index.html"));
     console.log(req.body.movieSearch)
     axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&s=${req.body.movieSearch}`).then(function(response){
       // console.log(response.data.Search)
       var movies = response.data.Search;
-      for (var i = 0; i < movies.length; i++){
-        console.log(`Title: ${movies[i].Title} \n Year: ${movies[i].Year} \n imdbID: ${movies[i].imdbID} \n Poster: ${movies[i].Poster}\n`)
-      }
+    //  for (var i = 0; i < movies.length; i++){
+    //     console.log(`Title: ${movies[i].Title} \n Year: ${movies[i].Year} \n imdbID: ${movies[i].imdbID} \n Poster: ${movies[i].Poster}\n`)
+    //   }
+      res.render('searchresults', { movies: movies })
     }).catch(function(err){
       if(err) throw err
     })
 
-    // res.render(200).end();
+    // res.render('searchresults', { user: req.user }).end();
   });
 
-  // app.post("/movies/:id", function(req, res) {
+  // app.post("/thespoils", function(req, res) {
   //   //res.sendFile(path.join(__dirname, "../views/html/index.html"));
   //   console.log(req.body.movieSearch)
-  //   axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&t=${req.body.movieSearch}`).then(function(response){
-  //    
+  //   axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&i=${req.body.}`).then(function(response){
+     
   //   }).catch(function(err){
   //     if(err) throw err
   //   })
 
-  //   // res.render(200).end();
+    // res.render(200).end();
   // });
 
 };
