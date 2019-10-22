@@ -31,13 +31,13 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/thespoils", function (req, res) {
+    app.post("api/thespoils", function (req, res) {
         db.Post.create(req.body).then(function(dbPost) {
             res.json(dbPost);
           });
     })
 
-    app.put("/thespoils/:id", function (req, res){
+    app.put("api/thespoils/:id", function (req, res){
         db.Post.update(req.body, {
             where: {
                 id: req.body.id
@@ -47,7 +47,7 @@ module.exports = function (app) {
         })
     })
 
-    app.delete("/thespoils/:id", function (req, res) {
+    app.delete("api/thespoils/:id", function (req, res) {
         db.Post.destroy({
             where: {
                 id: req.params.id
