@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content
+    section#content
+        #discussion
+            h2 Login
+            form
+                input(
+                    type="text"
+                    name="username"
+                    id="username"
+                    label="Username"
+                )
+                input(
+                    type="password"
+                    name="password"
+                    id="password"
+                    label="Password"
+                )
+                button#loginSubmit Join
+    script(src='/assets/js/login.js')
