@@ -1,2 +1,9 @@
 #searchArea
     h2 Search Results
+    #posts
+        ul
+            each movie in movies
+                -const imdbID=movie.imdbID
+                a(href=`/thespoils/` + imdbID)
+                    li=movie.Title
+                li=movie.Year
