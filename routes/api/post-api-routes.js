@@ -31,23 +31,14 @@ module.exports = function (app) {
         });
     });
 
-<<<<<<< HEAD
-    app.post("api/thespoils", function (req, res) {
-        db.Post.create(req.body).then(function(dbPost) {
-=======
     app.post("/api/thespoils", function (req, res) {
         // console.log(req.body);
         db.Post.create(req.body).then(function (dbPost) {
->>>>>>> 931221328d555f8b8ac07b96e2becac7400c5e81
             res.json(dbPost);
         });
     })
 
-<<<<<<< HEAD
-    app.put("api/thespoils/:id", function (req, res){
-=======
     app.put("/thespoils/:id", function (req, res) {
->>>>>>> 931221328d555f8b8ac07b96e2becac7400c5e81
         db.Post.update(req.body, {
             where: {
                 id: req.body.id

@@ -14,7 +14,7 @@
                                 img(src="/includes/11_indiana_jones.png" alt="Profile image")
                                 #author #{post.User.username}
             #inputform
-                form
+                form#spoilsForm
                     label Spoil Here!
                     textarea(id="newpost", name="newpost", data-id=spoilsInfo.id data-user=user.id cols="75", rows="5")
                     button#postButton Post!
