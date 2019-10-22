@@ -5,16 +5,18 @@
     h2 #{spoilsInfo.name}    
     #discussionBlock
         #commentBlock
-            .talk #{talk}
-            #talkBar
-                #talkWrapper
-                    #authorBar
-                        img(src="/includes/11_indiana_jones.png" alt="Profile image")
-                        #author #{authorName}
+            if spoilsInfo.Posts
+                each post in spoilsInfo.Posts
+                    .talk #{post.content}
+                    #talkBar
+                        #talkWrapper
+                            #authorBar
+                                img(src="/includes/11_indiana_jones.png" alt="Profile image")
+                                #author #{post.User.username}
             #inputform
-                form#newpost
+                form
                     label Spoil Here!
-                    textarea(id="newpost", name="newpost", cols="75", rows="5")
+                    textarea(id="newpost", name="newpost", data-id=spoilsInfo.id data-user=user.id cols="75", rows="5")
                     button#postButton Post!
             #replyBar    
                 button#reply.ibtn
@@ -29,4 +31,4 @@
         li Title: #{movieInfo.Title}gi
         li Year: #{movieInfo.Year}
         li Staring: #{movieInfo.Actors}
-        
+script(src='/assets/js/spoils.js')
