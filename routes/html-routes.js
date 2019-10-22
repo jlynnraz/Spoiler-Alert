@@ -36,7 +36,6 @@ module.exports = function(app) {
     }).catch(function(err){
       if(err) throw err
     })
-    // res.render('searchresults', { user: req.user }).end();
   });
 
   app.get("/thespoils/:id", function(req, res) {
@@ -51,12 +50,10 @@ module.exports = function(app) {
           image_path: "",
         }}).spread(function(movie, created){
           return res.render('thespoils', { spoilsInfo: movie, movieInfo: movieInfo })
-          console.log(created)
         })
     }).catch(function(err){
       if(err) throw err
     })
-    // res.render(200).end();
   });
 
 };
