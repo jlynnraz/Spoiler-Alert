@@ -1,0 +1,28 @@
+#posts a{
+    color:#363732;
+    text-decoration:none;
+    
+}
+.searchResultsArea:hover{
+    text-decoration: none;
+    background:#C04DF9;
+    border-radius:20%;
+}
+#posts a:visited{
+    color:#2BD1FC;
+    text-decoration:none;
+}
+#posts a{
+    text-decoration: none;
+}
+#posts{
+    margin:auto;
+    color:white;
+    width:40%;
+}
+.searchResultsArea{
+    font-size:1.35em;
+    text-align: center; 
+    padding:.5em;
+    margin-top:.5em;   
+}
