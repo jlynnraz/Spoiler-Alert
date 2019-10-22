@@ -12,3 +12,14 @@ $("#postButton").on("click", function (event) {
     //     window.location.href = "/profile";
     // });
 });
+
+$("#spoilsForm").hide();
+
+$("#reply").on("click", function(){
+    const button = $("#reply");
+    const form = $("#spoilsForm");
+
+    form.toggle("slow", function(){
+      
+    })
+})
