@@ -14,6 +14,7 @@ module.exports = function(app) {
     res.render('index', { user: req.user });
   });
   // routes added by matt
+  
   app.get("/profilepage", function(req, res) {
     res.render('profilepage', { user: req.user });
   });
