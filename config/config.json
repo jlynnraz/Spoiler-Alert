@@ -1,11 +1,7 @@
 {
     "development": {
       "username": "root",
-<<<<<<< HEAD
       "password": "matrix",
-=======
-      "password": "Flowerbud9",
->>>>>>> b3840ffa150367e6a939db454eb9936cb82816eb
       "database": "spoiler_db",
       "host": "127.0.0.1",
       "port": 3306,
