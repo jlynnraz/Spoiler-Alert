@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+    section#content
+        //- include includes/profile.pug
+        ul
+        each val in searchResults
+            li = val
+         includes/thespoils.pug

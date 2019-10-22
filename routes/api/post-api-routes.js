@@ -19,7 +19,7 @@ module.exports = function (app) {
 
 
     app.get("/api/posts/:movies", function (req, res) {
-console.log(req.params.movies)
+    console.log(req.params.movies)
         db.Post.findOne({
             name: [db.name],
             where: {
