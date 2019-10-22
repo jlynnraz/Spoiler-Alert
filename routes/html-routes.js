@@ -63,7 +63,6 @@ module.exports = function (app) {
 
     app.get("/thespoils/:id", function (req, res) {
         axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&i=${req.params.id}`).then(function (response) {
-            console.log(response.data)
             var movieInfo = response.data;
             db.Movie.findOrCreate({
                 where: {
@@ -71,10 +70,15 @@ module.exports = function (app) {
                 }, defaults: {
                     name: movieInfo.Title,
                     image_path: "",
-                }
+                },
+                include: [{
+                    model: db.Post,
+                    include: [db.User]
+                }]
             }).spread(function (movie, created) {
-                return res.render('thespoils', { spoilsInfo: movie, movieInfo: movieInfo })
-                console.log(created)
+                const data = { spoilsInfo: movie, movieInfo: movieInfo, user: req.user };
+                // console.log(movie);
+                return res.render('thespoils', data);
             })
         }).catch(function (err) {
             if (err) throw err

@@ -1,11 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        image_path: {
-            type: DataTypes.STRING,
+        content: {
+            type: DataTypes.TEXT,
             allowNull: false,
         }
     });
