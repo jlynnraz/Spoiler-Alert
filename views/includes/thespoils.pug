@@ -2,20 +2,12 @@
 -const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
 
 #discussion
-    h2 #{spoilsInfo.name}    
     #discussionBlock
+        h2 #{spoilsInfo.name}    
         #commentBlock
-            .talk #{talk}
-            #talkBar
-                #talkWrapper
-                    #authorBar
-                        img(src="/includes/11_indiana_jones.png" alt="Profile image")
-                        #author #{authorName}
-            #inputform
-                form#newpost
-                    label Spoil Here!
-                    textarea(id="newpost", name="newpost", cols="75", rows="5")
-                    button#postButton Post!
+            .talk #{talk}                            
+                #authorBar
+                    h3#author #{authorName}
             #replyBar    
                 button#reply.ibtn
                     i.far.fa-comment  Reply
@@ -23,10 +15,15 @@
                     i.fas.fa-edit  Edit
                 button#delete.ibtn
                     i.fas.fa-trash-alt  Delete
+            #inputform
+                form#newpost
+                    label Spoil Here!
+                    textarea(id="newpost", name="newpost", cols="75", rows="5")
+                    button#postButton Post!
 #movieInfo.wrapper
 
     ul
-        li Title: #{movieInfo.Title}gi
+        li Title: #{movieInfo.Title}
         li Year: #{movieInfo.Year}
         li Staring: #{movieInfo.Actors}
         
