@@ -1,52 +1,90 @@
-#discussion h2{
-    font-size:2em;
+#spoilsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 20% 25%;
 }
 
-#commentBlock{
-    background:rgb(221, 205, 205);
-    border:black .25em solid;
-    display:grid;
-    grid-template-columns:1fr 33%;
-    margin:auto;
-    width:70%;
+#discussion {
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
-#talk{
-    font-size:1.05em;
+#movieInfo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-right: 5em;
+}
+
+#aside{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+#discussion h2 {
+    font-size: 2em;
+}
+
+#commentBlock {
+    background: rgb(221, 205, 205);
+    border: black .25em solid;
+    display: grid;
+    grid-template-columns: 1fr 33%;
+    margin: auto;
+    width: 70%;
+}
+
+#talk {
+    font-size: 1.05em;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    padding:1em;
+    padding: 1em;
 }
 
-#authorBar img{
-    border-radius:50%;
-    width:3em;
+#authorBar img {
+    border-radius: 50%;
+    width: 3em;
 }
-#authorBar{
-    grid-column-start:1;
-    grid-column-end:3;
+
+#authorBar {
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end:2
-    
+    grid-row-end: 2
 }
-#replyBar{
-    display:flex;
-    grid-column-start:1;
-    grid-column-end:3;
+
+#replyBar {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-top:.5em;
-}
-#talkBar{
-    grid-column-start:2;
-    grid-column-end:3;
+    margin-top: .5em;
 }
 
-#talkWrapper{
-    display:grid;
-    grid-template-columns:3em 3em 3em ;
+#talkBar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#talkWrapper {
+    display: grid;
+    grid-template-columns: 3em 3em 3em;
     grid-template-rows: 4em 3em;
-    margin:1em;
+    margin: 1em;
+}
+#reply{
+    background-image: url(../img/ticket.png);
+}
+.ibtn{
+background-color:#2BD1FC;
+border: none;
+color: white;
+cursor: pointer;
+padding:.5em;
+font-size:.8+em; 
+}
+.ibtn:hover{
+background-color:rgb(22, 98, 168);
 }

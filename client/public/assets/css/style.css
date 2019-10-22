@@ -17,15 +17,18 @@ h2{
 h3{
       color:#C04DF9;
 }
+
 .wrapper{
   background:rgb(168, 168, 168);
 }
+
 /* main content layout */
-#contentWrapper{
+.halfWrapper{
   display: grid;
   grid-template-columns:auto 25%;
 }
 /* header */
+
 header{
     display:grid;
     grid-template-columns:2fr 1fr ;
@@ -34,7 +37,7 @@ header{
     font-style: italic;
     padding-top:2em;
     padding-bottom:2em;
-}
+    }
 
 header h1{
     color:#FA83CE;
@@ -65,3 +68,9 @@ header p{
     font-weight: 800;
     font-size:1.5em;
 }
+.sbtn{
+  background:none;
+  color: #2BD1FC;
+  border:none;
+}
+

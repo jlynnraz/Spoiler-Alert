@@ -1,4 +1,6 @@
 -const movieTopic="John Wick"
+-const year="2014"
+-const actors=["Keanue Reeves","Ian McShane"]
 -const authorName="Whisky Wolf"
 -const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
 -const trendingMovies=["Zombieland 2", "EndGame", "Spiderman: Far from home."]
@@ -8,31 +10,27 @@
 #discussion
     h2 #{movieTopic}    
     #discussionBlock
-        //- discussion goes here
         #commentBlock
             #talk #{talk}
             #talkBar
                 #talkWrapper
                     #authorBar
-                        img(src="../includes/11_indianna_jones.png" alt="Profile image")
+                        img(src="/includes/11_indianna_jones.png" alt="Profile image")
                         #author #{authorName}
                     #replyBar    
-                        button#reply reply
-                        button#update update
-                        button#delete delete
-aside#theSpoils
-    #hot
-        h3 Whats Hot!
-        ol 
-            each trendingMovie in trendingMovies
-                li=trendingMovie
-    #recentToUser
-        h3 Your Spoils!
-        ol
-            each userRecentSpoil in userRecentSpoils
-                li=userRecentSpoil
-    #recommends
-        h3 Check Out These Movies!
-        ol
-            each recommendMovie in recommendMovies
-                li=recommendMovie
+                        button#reply.ibtn
+                            i.far.fa-comment  Reply
+                        button#update.ibtn
+                            i.fas.fa-edit  Update
+                        button#delete.ibtn
+                            i.fas.fa-trash-alt  Delete
+#movieInfo.wrapper
+
+    ul
+        li Title: #{movieTopic}
+        li Year: #{year}
+        li Staring:
+            ul
+                each actor in actors
+                    li=actor
+        
