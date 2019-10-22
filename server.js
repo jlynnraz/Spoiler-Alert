@@ -11,13 +11,13 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 
 var session = require('express-session');
-
+const pug = require('pug')
+process.env.NODE_ENV="production"
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
-app.set("views engine", "pug")
-
+// const compiledFunction = pug.compileFile("layout.pug");
 // Requiring our models for syncing
 var db = require("./models");
 

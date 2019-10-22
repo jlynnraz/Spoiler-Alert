@@ -10,8 +10,21 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    //res.sendFile(path.join(__dirname, "../views/html/layout.html"));
+    //res.sendFile(path.join(__dirname, "../views/html/index.html"));
     res.render('index', { user: req.user });
+  });
+  // routes added by matt
+  app.get("/profilepage", function(req, res) {
+    res.render('profilepage', { user: req.user });
+  });
+  app.get("/searchresults", function(req, res) {
+    res.render('searchresults', { user: req.user });
+  });
+  app.get("/thespoils", function(req, res) {
+    res.render('thespoils', { user: req.user });
+  });
+  app.get("/newuser", function(req, res) {
+    res.render('newUser', { user: req.user });
   });
 
   // cms route loads cms.html

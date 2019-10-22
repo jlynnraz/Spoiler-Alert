@@ -17,19 +17,37 @@ h2{
 h3{
       color:#C04DF9;
 }
+
+.wrapper{
+  background:rgb(168, 168, 168);
+}
+
+/* main content layout */
+.halfWrapper{
+  display: grid;
+  grid-template-columns:auto 25%;
+}
 /* header */
+
 header{
+    display:grid;
+    grid-template-columns:2fr 1fr ;
+    grid-template-rows: 1fr 1fr;
     background:#1C061D;
     font-style: italic;
     padding-top:2em;
     padding-bottom:2em;
-}
+    }
 
-h1{
-    font-family: 'Overpass Mono', monospace;
+header h1{
     color:#FA83CE;
+    /* display:inline; */
+    font-family: 'Overpass Mono', monospace;
     font-size:4.25em;
-    display:inline;
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1;
+    grid-row-end:3;
     margin-left:2em;
     -webkit-animation: glow 10s ease-in-out infinite alternate;
     -moz-animation: glow 10s ease-in-out infinite alternate;
@@ -50,3 +68,9 @@ header p{
     font-weight: 800;
     font-size:1.5em;
 }
+.sbtn{
+  background:none;
+  color: #2BD1FC;
+  border:none;
+}
+

@@ -1,0 +1,20 @@
+-const trendingMovies=["Zombieland 2", "EndGame", "Spiderman: Far from home."]
+-const userRecentSpoils=["John Wick: Chapter 3 Parabellum", "Adams Family", "Joker"]
+-const recommendMovies=["Zombieland 2", "Gemini Man","Rambo: Last Blood"]
+
+aside#theSpoils
+    #hot
+        h3 Whats Hot!
+        ol 
+            each trendingMovie in trendingMovies
+                li=trendingMovie
+    #recentToUser
+        h3 Your Spoils!
+        ol
+            each userRecentSpoil in userRecentSpoils
+                li=userRecentSpoil
+    #recommends
+        h3 Check Out These Movies!
+        ol
+            each recommendMovie in recommendMovies
+                li=recommendMovie

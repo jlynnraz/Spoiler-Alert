@@ -1,0 +1,21 @@
+-const name="Whisky Wolf"
+-const top10Movies=["Die Hard", "Zootopia", "Mad Max", "Total Recall", "John Wick"];
+-const bottom10Movies=["Doom","The Gray", "A Man with a Camera", "Daybreak", "Spaceballs"]
+
+#userProfile
+    .contentWrapper
+        #userWrapper
+            #nameBlock
+                img(src="/11_indianna_jones.png" alt="Profile image")
+                h2 #{name}
+            #top10
+                h3 My Top 10 Movies
+                ol
+                    each top10Movie in top10Movies
+                        li=top10Movie
+            #bottom10
+                h3 My Least Favorite Movies!
+                ol
+                    each bottom10Movie in bottom10Movies
+                        li=bottom10Movie
+       
