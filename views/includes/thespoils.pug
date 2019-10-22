@@ -5,27 +5,28 @@
     h2 #{spoilsInfo.name}    
     #discussionBlock
         #commentBlock
-            #talk #{talk}
+            .talk #{talk}
             #talkBar
                 #talkWrapper
                     #authorBar
                         img(src="/includes/11_indiana_jones.png" alt="Profile image")
                         #author #{authorName}
-                    #inputform
-                        form#newpost
-                            label Spoil Here!
-                            textarea(id="newpost", name="newpost", cols="75", rows="5")
-                    #replyBar    
-                        button#reply.ibtn
-                            i.far.fa-comment  Reply
-                        button#edit.ibtn
-                            i.fas.fa-edit  Edit
-                        button#delete.ibtn
-                            i.fas.fa-trash-alt  Delete
+            #inputform
+                form#newpost
+                    label Spoil Here!
+                    textarea(id="newpost", name="newpost", cols="75", rows="5")
+                    button#postButton Post!
+            #replyBar    
+                button#reply.ibtn
+                    i.far.fa-comment  Reply
+                button#edit.ibtn
+                    i.fas.fa-edit  Edit
+                button#delete.ibtn
+                    i.fas.fa-trash-alt  Delete
 #movieInfo.wrapper
 
     ul
-        li Title: #{movieInfo.Title}
+        li Title: #{movieInfo.Title}gi
         li Year: #{movieInfo.Year}
         li Staring: #{movieInfo.Actors}
         
