@@ -41,9 +41,8 @@ header{
 
 header h1{
     color:#FA83CE;
-    /* display:inline; */
-    font-family: 'Overpass Mono', monospace;
-    font-size:4.25em;
+    font-family: 'Coda Caption';
+    font-size:4.35em;
     grid-column-start:1;
     grid-column-end:2;
     grid-row-start:1;

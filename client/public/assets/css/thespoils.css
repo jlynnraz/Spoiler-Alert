@@ -1,90 +1,97 @@
 #spoilsWrapper {
     display: grid;
-    grid-template-columns: 1fr 20% 25%;
-}
-
-#discussion {
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-template-columns:26% 1fr 25%;
 }
 
 #movieInfo{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin-right: 5em;
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    font-size:1.25em;
+    margin-left:.5em;
+    padding:.5em;
 }
 
-#aside{
+#movieInfo img{    
+    margin:auto;
+}
+
+#discussion {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#movieInfo li{
+    padding-top:.25em;
+}
+
+#aside {
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-
 #discussion h2 {
-    font-size: 2em;
+    font-size: 4em;
+    text-align: center;
+    padding:.25em;
 }
 
 #commentBlock {
     background: rgb(221, 205, 205);
     border: black .25em solid;
-    display: grid;
-    grid-template-columns: 1fr 33%;
-    margin: auto;
-    width: 70%;
+    margin: auto; 
+    width: 75%;  
 }
 
 #talk {
     font-size: 1.05em;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
     padding: 1em;
 }
 
-#authorBar img {
-    border-radius: 50%;
-    width: 3em;
+#author {
+    color: #2BD1FC;
+    font-size: 1.25em;
+    text-align: right;
+    padding: .3em 1em;
+    width: 35%;
+}
+
+#author{
+    background: #1C061D;
 }
 
 #authorBar {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1em;
+    margin-top:.5em;
 }
 
 #replyBar {
     display: flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
     margin-top: .5em;
 }
 
-#talkBar {
-    grid-column-start: 2;
-    grid-column-end: 3;
+
+.ibtn {
+    background-color: #2BD1FC;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: .5em;
+    font-size: .8+em;
 }
 
-#talkWrapper {
-    display: grid;
-    grid-template-columns: 3em 3em 3em;
-    grid-template-rows: 4em 3em;
-    margin: 1em;
+.ibtn:hover {
+    background-color: rgb(22, 98, 168);
 }
-#reply{
-    background-image: url(../img/ticket.png);
+
+#spoilsForm
+textarea{
+    width:97%;
 }
-.ibtn{
-background-color:#2BD1FC;
-border: none;
-color: white;
-cursor: pointer;
-padding:.5em;
-font-size:.8+em; 
-}
-.ibtn:hover{
-background-color:rgb(22, 98, 168);
+#spoilsForm
+label{
+    font-family: 'Coda Caption';
+    font-size:1.5em;
+    font-style: italic;;
 }

@@ -2,9 +2,12 @@ extends layout.pug
 
 block content
     section#content
-        #discussion
-            h2 Login
-            form
+        .loginBox.wrapper
+            h2 Welcome Back!
+            p Please Remember
+            p#goldenrule "Be Excellent To Each Other"
+            form#loginForm
+                h3 Login
                 input(
                     type="text"
                     name="username"
@@ -17,5 +20,6 @@ block content
                     id="password"
                     label="Password"
                 )
-                button#loginSubmit Join
+                button#loginSubmit.subBtn
+                    i.fas.fa-hands-helping  Login
     script(src='/assets/js/login.js')

@@ -3,5 +3,6 @@ extends layout.pug
 block content
     section#content
         #homePage
-            a(id='login' href='/login') Log In
-            a(id='createAccount' href='/register') Create Account
+            a.welcome(id='login' href='/login') Log In
+            img.logo(src="/assets/images/spoilers.png")
+            a.welcome(id='createAccount' href='/register') Create Account
