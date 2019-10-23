@@ -13,6 +13,7 @@ $("#postButton").on("click", function (event) {
     // });
 });
 
+$("#editform").hide();
 $("#spoilsForm").hide();
 
 $("#reply").on("click", function(){
@@ -24,30 +25,31 @@ $("#reply").on("click", function(){
     })
 });
 
-$("#edit").on("click", function(event){
+$(".edit").on("click", function(event){
     event.preventDefault();
-    console.log($(this))
-    var postId = $(this).data("postId")
-    $.ajax({
-        url: '/thespoils/postId',
-        type: 'PUT',
-        success: function(result){
-            console.log(result)
-        }
-    })
-    // .then(function(){
-
-    // })
-    //get data-postId from the button corresponding to the specific post
-    //ajax call to "/thespoils/postId"
-
+    $("#postButtonE").attr("data-postId", $(this).data("postId"))
+    console.log($(this).data("postId"))
+    $("#editform").show();
 });
 
-$("#delete").on("click", function(event){
+$("#postButtonE").on("click", function(event){
     event.preventDefault();
     var postId = $(this).data("postId")
     $.ajax({
-        url: '/thespoils/postId',
+        url: `/api/thespoils/${postId}`,
+        type: 'PUT',
+        success: function(result){
+            console.log($(`#post-${postId}`))
+            $(`#post-${postId}`).text($("#editedpost").val());
+        }
+    })
+})
+
+$(".delete").on("click", function(event){
+    event.preventDefault();
+    var postId = $(this).data("postId")
+    $.ajax({
+        url: '/api/thespoils/postId',
         type: 'DELETE',
         success: function(result){
             console.log(result)

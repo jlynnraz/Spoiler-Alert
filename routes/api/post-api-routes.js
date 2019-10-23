@@ -39,7 +39,7 @@ module.exports = function (app) {
         });
     })
 
-    app.put("/thespoils/:id", function (req, res) {
+    app.put("/api/thespoils/:id", function (req, res) {
         
         db.Post.update(req.body, {
             where: {
