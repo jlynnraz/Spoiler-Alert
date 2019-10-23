@@ -9,8 +9,3 @@
   #theSpoils{
     margin-right:1em;
   } 
-@media screen and (max-width:760px){
-    #theSpoils{
-        display: none:
-    }
-}

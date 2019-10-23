@@ -30,10 +30,10 @@ h3{
   background:#1C061D;
 }
 /* main content layout */
-.halfWrapper{
+/* .halfWrapper{
   display: grid;
   grid-template-columns:auto 25%;
-}
+} */
 /* header */
 
 header{
@@ -110,3 +110,16 @@ color:#FF3F3F;
   color: #F3EA5F
 }
 /* recommends but may change */
+@media screen and (min-width:760px){
+  .halfWrapper{
+    display: grid;
+    grid-template-columns:auto 35%;
+  }
+}
+@media screen and (min-width:1024px){
+  .halfWrapper{
+    display: grid;
+    grid-template-columns:auto 25%;
+  }
+  
+}
