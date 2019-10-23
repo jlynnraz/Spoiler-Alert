@@ -4,16 +4,19 @@
 
 aside#theSpoils
     #hot
+        i.fas.fa-fire-alt 
         h3 Whats Hot!
         ol 
             each trendingMovie in trendingMovies
                 li=trendingMovie
     #recentToUser
+        i.far.fa-comments
         h3 Your Spoils!
         ol
             each userRecentSpoil in userRecentSpoils
                 li=userRecentSpoil
     #recommends
+        i.far.fa-thumbs-up
         h3 Check Out These Movies!
         ol
             each recommendMovie in recommendMovies

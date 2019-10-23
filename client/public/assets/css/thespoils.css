@@ -1,17 +1,27 @@
 #spoilsWrapper {
     display: grid;
-    grid-template-columns: 1fr 20% 25%;
+    grid-template-columns:26% 1fr 25%;
+}
+
+#movieInfo{
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    font-size:1.25em;
+    margin-left:.5em;
+    padding:.5em;
+}
+
+#movieInfo img{    
+    margin:auto;
 }
 
 #discussion {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-#movieInfo {
     grid-column-start: 2;
     grid-column-end: 3;
-    margin-right: 5em;
+}
+
+#movieInfo li{
+    padding-top:.25em;
 }
 
 #aside {
@@ -20,23 +30,20 @@
 }
 
 #discussion h2 {
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
+    padding:.25em;
 }
 
 #commentBlock {
     background: rgb(221, 205, 205);
     border: black .25em solid;
-    margin: auto;
-    width: 70%;
+    margin: auto; 
+    width: 75%;  
 }
 
 #talk {
     font-size: 1.05em;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
     padding: 1em;
 }
 
@@ -48,7 +55,7 @@
     width: 35%;
 }
 
-#author h3 {
+#author{
     background: #1C061D;
 }
 
@@ -61,19 +68,9 @@
 
 #replyBar {
     display: flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
     margin-top: .5em;
 }
 
-#talkWrapper {
-    display: grid;
-    grid-template-columns: 3em 3em 3em;
-    grid-template-rows: 4em 3em;
-    margin: 1em;
-}
 
 .ibtn {
     background-color: #2BD1FC;
@@ -86,4 +83,15 @@
 
 .ibtn:hover {
     background-color: rgb(22, 98, 168);
+}
+
+#spoilsForm
+textarea{
+    width:97%;
+}
+#spoilsForm
+label{
+    font-family: 'Coda Caption';
+    font-size:1.5em;
+    font-style: italic;;
 }

@@ -1,0 +1,40 @@
+#loginForm
+input{
+    font-size:1.25em;
+    display: block;
+    margin: 1em auto;
+    width:80%;
+}
+#loginForm h3{
+    font-size:1.25em;
+    font-family: 'Coda Caption';
+}
+.loginBox{
+    margin: auto;   
+    text-align: center;
+    width:33%; 
+}
+.loginBox
+h2{
+    font-size:2em;
+    font-family: 'Coda Caption';
+    padding-top:1em;
+    padding-bottom:.5em;
+}
+.subBtn{
+    background:#2BD1FC;
+    border:2px #F3EA5F solid;
+    color:#F3EA5F;
+    font-size:1.25em;
+    font-family: 'Coda Caption';
+    padding:.5em .75em;
+    margin-bottom:1em;
+}
+.loginBox p{
+    font-size:1.5em;
+}
+#goldenrule{
+    padding-top: .75em;
+    padding-bottom:.75em;
+    font-style:italic;
+}
