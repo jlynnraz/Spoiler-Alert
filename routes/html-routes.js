@@ -42,7 +42,24 @@ module.exports = function (app) {
         if (!req.user) {
             return res.redirect('/login');
         }
-        res.render('profilepage', { username: req.user.username });
+        db.User.findOne({
+            where: {
+                id: req.user.id
+            },
+            include: [{
+                model: db.Post,
+                include: [db.Movie]
+            },
+            db.Movie
+            ]
+        }).then(function (result) {
+            const spoiledMovies = result.Posts.map(post => post.Movie.name);
+            res.render('profilepage', {
+                username: req.user.username,
+                movies: result.Movies,
+                spoiledMovies: spoiledMovies
+            });
+        });
     });
 
     app.get('/logout', function (req, res) {

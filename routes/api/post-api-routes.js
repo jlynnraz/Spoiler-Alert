@@ -17,7 +17,6 @@ module.exports = function (app) {
         res.json(queryObj)
     })
 
-
     app.get("/api/posts/:movies", function (req, res) {
         console.log(req.params.movies)
         db.Post.findOne({
