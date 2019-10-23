@@ -69,7 +69,7 @@ module.exports = function (app) {
 
     app.post("/searchresults", function (req, res) {
         console.log(req.body.movieSearch)
-        axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&s=${req.body.movieSearch}`).then(function (response) {
+        axios.get(`http://www.omdbapi.com/?apikey=${process.env.OMDB_KEY}&s=${req.body.movieSearch}`).then(function (response) {
             var movies = response.data.Search;
             res.render('searchresults', { movies: movies })
         }).catch(function (err) {
@@ -79,7 +79,7 @@ module.exports = function (app) {
     });
 
     app.get("/thespoils/:id", function (req, res) {
-        axios.get(`http://www.omdbapi.com/?apikey=79a1eb7f&i=${req.params.id}`).then(function (response) {
+        axios.get(`http://www.omdbapi.com/?apikey=${process.env.OMDB_KEY}&i=${req.params.id}`).then(function (response) {
             var movieInfo = response.data;
             db.Movie.findOrCreate({
                 where: {
