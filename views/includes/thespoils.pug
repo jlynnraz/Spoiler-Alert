@@ -7,7 +7,7 @@
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
-                    .talk #{post.content}
+                    .talk(data-postId=post.id) #{post.content}
                     #talkBar
                         #talkWrapper
                             #authorBar
