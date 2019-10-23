@@ -49,7 +49,8 @@ module.exports = function (app) {
         })
     })
 
-    app.delete("api/thespoils/:id", function (req, res) {
+    app.delete("/api/thespoils/:id", function (req, res) {
+        console.log("hello")
         db.Post.destroy({
             where: {
                 id: req.params.id
