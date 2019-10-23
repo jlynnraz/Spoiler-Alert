@@ -40,7 +40,7 @@ module.exports = function (app) {
     })
 
     app.put("/thespoils/:id", function (req, res) {
-        //id will come from data-attribute
+        
         db.Post.update(req.body, {
             where: {
                 id: req.body.id

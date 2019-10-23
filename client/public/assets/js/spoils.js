@@ -28,9 +28,19 @@ $("#edit").on("click", function(event){
     event.preventDefault();
     console.log($(this))
     var postId = $(this).data("postId")
+    $.ajax({
+        url: '/thespoils/postId',
+        type: 'PUT',
+        success: function(result){
+            console.log(result)
+        }
+    })
+    // .then(function(){
+
+    // })
     //get data-postId from the button corresponding to the specific post
     //ajax call to "/thespoils/postId"
-    //in the .then() similar to devoured/not devoured
+
 });
 
 $("#delete").on("click", function(event){

@@ -17,18 +17,9 @@
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
-<<<<<<< HEAD
-                    .talk(data-postId=post.id) #{post.content}
-                    #talkBar
-                        #talkWrapper
-                            #authorBar
-                                img(src="/includes/11_indiana_jones.png" alt="Profile image")
-                                #author #{post.User.username}
-=======
                     .talk #{post.content}
                         #authorBar
                             #author #{post.User.username}
->>>>>>> 37b5f9068e144edb9c118d4261786a6fa0712d7d
             #inputform
                 form#spoilsForm
                     label Spoil Here!
