@@ -8,18 +8,22 @@ grey #404E4D;
 */
 
 body{
-    background:#404E4D;
+  background:rgb(57, 44, 71);
 }
 
 h2{
-    color: #F3EA5F;
+  color: #F3EA5F;
 }
 h3{
-      color:#C04DF9;
+  color:#C04DF9;
 }
 
+#content{
+  margin-top:1em;
+}
 .wrapper{
   background:rgb(168, 168, 168);
+  border:.25em solid #2BD1FC;
 }
 .pbWrapper{
   color:#2BD1FC;
@@ -106,12 +110,3 @@ color:#FF3F3F;
   color: #F3EA5F
 }
 /* recommends but may change */
-.aside3{
-  background:#1C061D;
-  color:#2BD1FC;
-}
-#theSpoils li{
-  font-size:1.25em;
-  padding:.25em;
-}
-  

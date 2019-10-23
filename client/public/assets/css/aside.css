@@ -1,0 +1,16 @@
+.aside3{
+    background:#1C061D;
+    color:#2BD1FC;
+  }
+  #theSpoils li{
+    font-size:1.25em;
+    padding:.25em;
+  }
+  #theSpoils{
+    margin-right:1em;
+  } 
+@media screen and (max-width:760px){
+    #theSpoils{
+        display: none:
+    }
+}
