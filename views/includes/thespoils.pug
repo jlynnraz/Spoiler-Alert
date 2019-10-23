@@ -1,34 +1,45 @@
 -const authorName="Whisky Wolf"
 -const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
 
+#movieInfo.wrapper
+    img(src=movieInfo.Poster)
+    ul
+        li Title: #{movieInfo.Title}
+        li Year: #{movieInfo.Year}
+        li Staring: #{movieInfo.Actors}
+        li Directed by: #{movieInfo.Director}
+        li Rated: #{movieInfo.Rated}
+        li #{movieInfo.Plot}
+        li Awards #{movieInfo.Awards}
 #discussion
-    h2 #{spoilsInfo.name}    
     #discussionBlock
+        h2 #{spoilsInfo.name}    
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
+<<<<<<< HEAD
                     .talk(data-postId=post.id) #{post.content}
                     #talkBar
                         #talkWrapper
                             #authorBar
                                 img(src="/includes/11_indiana_jones.png" alt="Profile image")
                                 #author #{post.User.username}
+=======
+                    .talk #{post.content}
+                        #authorBar
+                            #author #{post.User.username}
+>>>>>>> 37b5f9068e144edb9c118d4261786a6fa0712d7d
             #inputform
                 form#spoilsForm
                     label Spoil Here!
                     textarea(id="newpost", name="newpost", data-id=spoilsInfo.id data-user=user.id cols="75", rows="5")
-                    button#postButton Post!
+                    button#postButton.ibtn
+                        i.fas.fa-stamp  Post!
             #replyBar    
                 button#reply.ibtn
-                    i.far.fa-comment  Reply
+                    i.far.fa-comment  Spoil!
                 button#edit.ibtn
                     i.fas.fa-edit  Edit
                 button#delete.ibtn
                     i.fas.fa-trash-alt  Delete
-#movieInfo.wrapper
-
-    ul
-        li Title: #{movieInfo.Title}gi
-        li Year: #{movieInfo.Year}
-        li Staring: #{movieInfo.Actors}
 script(src='/assets/js/spoils.js')

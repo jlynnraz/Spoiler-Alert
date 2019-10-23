@@ -1,0 +1,29 @@
+#homePage{
+    display:grid;
+    grid-template-columns:25% 40% 30%;
+}
+#login{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: right;
+    margin-left:10%
+}
+.logo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width:100%;
+}
+#createAccount{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: left;
+    margin-right:10%
+}
+.welcome{
+    font-size:4em;
+    text-decoration: none;
+    margin-top:3em;
+}
+.welcome:visited{
+    color:white;
+}
