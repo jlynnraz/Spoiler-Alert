@@ -27,17 +27,22 @@ $("#reply").on("click", function(){
 
 $(".edit").on("click", function(event){
     event.preventDefault();
-    $("#postButtonE").attr("data-postId", $(this).data("postId"))
-    console.log($(this).data("postId"))
+    $("#postButtonE").attr("data-postid", $(this).data("postid"))
+    console.log($(this).data("postid"))
     $("#editform").show();
 });
 
 $("#postButtonE").on("click", function(event){
     event.preventDefault();
-    var postId = $(this).data("postId")
+    var data = {
+        content: $("#editedpost").val()
+    }
+    var postId = $(this).attr("data-postid")
+    console.log($(this).data("postid"))
     $.ajax({
         url: `/api/thespoils/${postId}`,
         type: 'PUT',
+        data: data,
         success: function(result){
             console.log($(`#post-${postId}`))
             $(`#post-${postId}`).text($("#editedpost").val());
@@ -47,7 +52,7 @@ $("#postButtonE").on("click", function(event){
 
 $(".delete").on("click", function(event){
     event.preventDefault();
-    var postId = $(this).data("postId")
+    var postId = $(this).data("postid")
     $.ajax({
         url: '/api/thespoils/postId',
         type: 'DELETE',

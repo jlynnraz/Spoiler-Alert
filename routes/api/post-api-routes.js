@@ -43,7 +43,7 @@ module.exports = function (app) {
         
         db.Post.update(req.body, {
             where: {
-                id: req.body.id
+                id: req.params.id
             }
         }).then(function (dbPost) {
             res.json(dbPost)
