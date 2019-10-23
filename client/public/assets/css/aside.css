@@ -9,3 +9,37 @@
   #theSpoils{
     margin-right:1em;
   } 
+  #navbar{
+    padding:.5em;
+    font-size:1.5em;
+    display:flex;
+    flex-wrap:none;
+  }
+  .asideHeader{
+    display: flex;
+  }
+  .fa-user-circle,
+  .fa-share-square {
+    padding-left:1em;
+    padding-right:1em;
+  }
+  .navIcons{
+    font-size:2.15em;  
+  }
+  #navbar button{
+      background:none;
+      border:none;
+      color:#2BD1FC;
+  }
+  .asideHeader{
+    font-size:1.5em;
+    padding:.5em;
+  }
+  .fire {
+  background:#1C061D;
+  color:#FF3F3F;
+  }
+  .mySpoils{
+    background:#1C061D;
+    color: #F3EA5F
+  }

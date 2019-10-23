@@ -33,21 +33,24 @@ module.exports = function (app) {
     app.post("/api/thespoils", function (req, res) {
         // console.log(req.body);
         db.Post.create(req.body).then(function (dbPost) {
+            console.log(dbPost)
             res.json(dbPost);
         });
     })
 
-    app.put("/thespoils/:id", function (req, res) {
+    app.put("/api/thespoils/:id", function (req, res) {
+        
         db.Post.update(req.body, {
             where: {
-                id: req.body.id
+                id: req.params.id
             }
         }).then(function (dbPost) {
             res.json(dbPost)
         })
     })
 
-    app.delete("api/thespoils/:id", function (req, res) {
+    app.delete("/api/thespoils/:id", function (req, res) {
+        console.log("hello")
         db.Post.destroy({
             where: {
                 id: req.params.id

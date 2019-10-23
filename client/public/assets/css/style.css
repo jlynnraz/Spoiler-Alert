@@ -29,11 +29,8 @@ h3{
   color:#2BD1FC;
   background:#1C061D;
 }
-/* main content layout */
-/* .halfWrapper{
-  display: grid;
-  grid-template-columns:auto 25%;
-} */
+
+
 /* header */
 
 header{
@@ -80,40 +77,12 @@ header p{
   border:none;
 }
 
-/* aside */
-#navbar{
-  padding:.5em;
-  font-size:1.5em;
-}
-.asideHeader{
-  display: flex;
-}
-.fa-user-circle,
-.fa-share-square {
-  padding-left:1em;
-  padding-right:1em;
-}
-.navIcons{
-  display:flex;
-  font-size:1.15em;
-}
-.asideHeader{
-  font-size:1.5em;
-  padding:.5em;
-}
-.fire {
-background:#1C061D;
-color:#FF3F3F;
-}
-.mySpoils{
-  background:#1C061D;
-  color: #F3EA5F
-}
+
 /* recommends but may change */
 @media screen and (min-width:760px){
   .halfWrapper{
     display: grid;
-    grid-template-columns:auto 35%;
+    grid-template-columns:auto 45%;
   }
 }
 @media screen and (min-width:1024px){

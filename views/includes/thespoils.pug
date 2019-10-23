@@ -15,19 +15,21 @@
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
-                    .talk #{post.content} 
+                    #post
+                        div(
+                            class="talk"
+                            id="post-"+post.id
+                        ) #{post.content}
                         #authorBar
                             #editBlock        
                                 button(
-                                        id="edit"
-                                        class="ibtn"
-                                        "data-postId"
+                                        class="ibtn edit"
+                                        data-postId=""+post.id
                                 )
                                     i.fas.fa-edit  Edit
                                 button(
-                                        id="delete"
-                                        class="ibtn"
-                                        "data-postId")
+                                        class="ibtn delete"
+                                        data-postId=post.id)
                                     i.fas.fa-trash-alt  Delete
                             #author #{post.User.username}
             #inputform
@@ -35,6 +37,12 @@
                     label Spoil Here!
                     textarea(id="newpost", name="newpost", data-id=spoilsInfo.id data-user=user.id cols="75", rows="5")
                     button#postButton.ibtn
+                        i.fas.fa-stamp  Post!
+            #editform
+                form#spoilsForm
+                    label Spoil Here!
+                    textarea(id="editedpost", name="editedpost", data-id=spoilsInfo.id data-user=user.id cols="75", rows="5")
+                    button#postButtonE.ibtn
                         i.fas.fa-stamp  Post!
             #replyBar    
                 button#reply.ibtn
