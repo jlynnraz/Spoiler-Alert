@@ -1,5 +1,6 @@
 #homePage{
     display:grid;
+    font-family: 'Coda Caption';
     grid-template-columns:25% 40% 30%;
 }
 #login{
@@ -17,10 +18,10 @@
     grid-column-start: 3;
     grid-column-end: 4;
     text-align: left;
-    margin-right:10%
+    margin-right:10%;
 }
 .welcome{
-    font-size:4em;
+    font-size:3.5em;
     text-decoration: none;
     margin-top:3em;
 }

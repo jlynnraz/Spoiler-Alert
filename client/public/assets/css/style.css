@@ -8,25 +8,29 @@ grey #404E4D;
 */
 
 body{
-    background:#404E4D;
+  background:rgb(57, 44, 71);
 }
 
 h2{
-    color: #F3EA5F;
+  color: #F3EA5F;
 }
 h3{
-      color:#C04DF9;
+  color:#C04DF9;
 }
 
+#content{
+  margin-top:1em;
+}
 .wrapper{
   background:rgb(168, 168, 168);
+  border:.25em solid #2BD1FC;
+}
+.pbWrapper{
+  color:#2BD1FC;
+  background:#1C061D;
 }
 
-/* main content layout */
-.halfWrapper{
-  display: grid;
-  grid-template-columns:auto 25%;
-}
+
 /* header */
 
 header{
@@ -73,3 +77,18 @@ header p{
   border:none;
 }
 
+
+/* recommends but may change */
+@media screen and (min-width:760px){
+  .halfWrapper{
+    display: grid;
+    grid-template-columns:auto 45%;
+  }
+}
+@media screen and (min-width:1024px){
+  .halfWrapper{
+    display: grid;
+    grid-template-columns:auto 25%;
+  }
+  
+}
