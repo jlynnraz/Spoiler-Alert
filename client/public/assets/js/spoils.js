@@ -41,6 +41,7 @@ $("#postButtonE").on("click", function (event) {
         success: function (result) {
             console.log($(`#post-${postId}`))
             $(`#post-${postId}`).text($("#editedpost").val());
+            $("#editedpost").val("");
         }
     })
 })
