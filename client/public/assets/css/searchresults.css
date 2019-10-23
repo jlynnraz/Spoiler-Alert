@@ -1,24 +1,35 @@
-#posts a{
-    color:#363732;
-    text-decoration:none;
-    
+.searchTitle{
+    font-size:2em;
+    text-align: center;
+    font-family: 'Coda Caption';
+    padding:.6em;
 }
+
+
 .searchResultsArea:hover{
     text-decoration: none;
-    background:#C04DF9;
+    background:#1C061D;
     border-radius:20%;
-}
-#posts a:visited{
     color:#2BD1FC;
+}
+
+
+#posts a:visited{
     text-decoration:none;
+    color:#363732;
+}
+#posts a:hover{
+    color:#2BD1FC;
 }
 #posts a{
     text-decoration: none;
+    color:#363732;
 }
 #posts{
-    margin:auto;
-    color:white;
+    margin:auto;    
     width:40%;
+    color:#363732;
+    text-decoration:none;
 }
 .searchResultsArea{
     font-size:1.35em;
