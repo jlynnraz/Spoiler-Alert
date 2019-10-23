@@ -8,6 +8,7 @@ $("#postButton").on("click", function (event) {
     });
 });
 
+$("#editform").hide();
 $("#spoilsForm").hide();
 
 $("#reply").on("click", function(){
@@ -16,5 +17,42 @@ $("#reply").on("click", function(){
 
     form.toggle("slow", function(){
       
+    })
+});
+
+$(".edit").on("click", function(event){
+    event.preventDefault();
+    $("#postButtonE").attr("data-postid", $(this).data("postid"))
+    console.log($(this).data("postid"))
+    $("#editform").show();
+});
+
+$("#postButtonE").on("click", function(event){
+    event.preventDefault();
+    var data = {
+        content: $("#editedpost").val()
+    }
+    var postId = $(this).attr("data-postid")
+    console.log($(this).data("postid"))
+    $.ajax({
+        url: `/api/thespoils/${postId}`,
+        type: 'PUT',
+        data: data,
+        success: function(result){
+            console.log($(`#post-${postId}`))
+            $(`#post-${postId}`).text($("#editedpost").val());
+        }
+    })
+})
+
+$(".delete").on("click", function(event){
+    event.preventDefault();
+    var postId = $(this).data("postid")
+    $.ajax({
+        url: '/api/thespoils/postId',
+        type: 'DELETE',
+        success: function(result){
+            console.log(result)
+        }
     })
 })
