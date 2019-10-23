@@ -3,21 +3,30 @@
 -const recommendMovies=["Zombieland 2", "Gemini Man","Rambo: Last Blood"]
 
 aside#theSpoils
+    #navbar.pbWrapper
+        .navIcons
+            i.fas.fa-user-circle
+            p Profile          
+            i.far.fa-share-square 
+            p Log Out
     #hot
-        i.fas.fa-fire-alt 
-        h3 Whats Hot!
+        .asideHeader.fire
+            i.fas.fa-fire-alt.fire 
+            h3.fire Whats Hot!
         ol 
             each trendingMovie in trendingMovies
                 li=trendingMovie
-    #recentToUser
-        i.far.fa-comments
-        h3 Your Spoils!
+    #userSpoilsBar
+        .asideHeader.mySpoils
+            i.far.fa-comments
+            h3.mySpoils Your Spoils!
         ol
             each userRecentSpoil in userRecentSpoils
                 li=userRecentSpoil
     #recommends
-        i.far.fa-thumbs-up
-        h3 Check Out These Movies!
+        .asideHeader.aside3
+            i.far.fa-thumbs-up
+            h3.aside3 Check Out These Movies!
         ol
             each recommendMovie in recommendMovies
                 li=recommendMovie

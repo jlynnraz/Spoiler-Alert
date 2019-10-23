@@ -1,5 +1,3 @@
--const authorName="Whisky Wolf"
--const talk="In the end of the movie John gets a new, bigger doggo! And that Dog does not die! It is still alive at the end of John Wick 3!"
 
 #movieInfo.wrapper
     img(src=movieInfo.Poster)
@@ -17,7 +15,7 @@
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
-                    .talk #{post.content}
+                    .talk #{post.content} 
                         #authorBar
                             #editBlock        
                                 button(
