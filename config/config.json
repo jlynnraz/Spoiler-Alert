@@ -17,7 +17,11 @@
     },
     "production": {
       "username": "root",
+<<<<<<< HEAD
       "password": "Flowerbud9",
+=======
+      "password": "nc246Qer!",
+>>>>>>> 17e69ced352733e763832637ac95d6e030894c61
       "database": "spoiler_db",
       "host": "127.0.0.1",
       "port": 3306,

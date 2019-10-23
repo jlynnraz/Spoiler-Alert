@@ -21,7 +21,8 @@ module.exports = function (sequelize, DataTypes) {
                 allowNull: false
             }
         });
+        User.belongsToMany(models.Movie, { through: models.UserMovie });
     };
-
+    
     return User;
 };
