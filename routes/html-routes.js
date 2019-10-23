@@ -1,5 +1,4 @@
 const router = require("express").Router();
-// const moviesController = require("../controllers/spoilerController");
 var path = require("path");
 const pug = require('pug');
 var axios = require('axios');
@@ -11,7 +10,6 @@ module.exports = function (app) {
 
     // index route loads view.html
     app.get("/", function (req, res) {
-        //res.sendFile(path.join(__dirname, "../views/html/index.html"));
         res.render('index', { user: req.user });
     });
     // routes added by matt
@@ -75,7 +73,6 @@ module.exports = function (app) {
         }).catch(function (err) {
             if (err) throw err
         })
-        // res.render('searchresults', { user: req.user }).end();
     });
 
     app.get("/thespoils/:id", function (req, res) {
@@ -94,12 +91,10 @@ module.exports = function (app) {
                 }]
             }).spread(function (movie, created) {
                 const data = { spoilsInfo: movie, movieInfo: movieInfo, user: req.user };
-                // console.log(movie);
                 return res.render('thespoils', data);
             })
         }).catch(function (err) {
             if (err) throw err
         })
-        // res.render(200).end();
     });
 };
