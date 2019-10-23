@@ -19,6 +19,18 @@
                 each post in spoilsInfo.Posts
                     .talk #{post.content}
                         #authorBar
+                            #editBlock        
+                                button(
+                                        id="edit"
+                                        class="ibtn"
+                                        "data-postId"
+                                )
+                                    i.fas.fa-edit  Edit
+                                button(
+                                        id="delete"
+                                        class="ibtn"
+                                        "data-postId")
+                                    i.fas.fa-trash-alt  Delete
                             #author #{post.User.username}
             #inputform
                 form#spoilsForm
@@ -29,8 +41,4 @@
             #replyBar    
                 button#reply.ibtn
                     i.far.fa-comment  Spoil!
-                button#edit.ibtn
-                    i.fas.fa-edit  Edit
-                button#delete.ibtn
-                    i.fas.fa-trash-alt  Delete
 script(src='/assets/js/spoils.js')
