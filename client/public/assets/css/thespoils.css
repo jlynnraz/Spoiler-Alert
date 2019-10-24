@@ -9,21 +9,21 @@
 }
 #movieInfo{
     display:flex;
+    margin-left:.5em;
 }
 #commentBlock {
     background: rgb(221, 205, 205);
-    border: black .25em solid;
+    border: #2BD1FC .25em solid;
     margin: auto;  
 }
 
 #author {
     color: #2BD1FC;
     text-align: right;
-}
-
-#author{
+    padding:1.25 1.5em;
     background: #1C061D;
 }
+
 
 #authorBar {
     display: flex;
@@ -36,8 +36,9 @@
     display: flex;
     margin-top: .5em;
 }
-
-
+#discussionBlock h2{
+    font-size:2.5em;
+}
 .ibtn {
     background-color: #2BD1FC;
     border: none;
@@ -54,13 +55,19 @@
 #spoilsForm
 textarea{
     width:97%;
+    border-color:#2BD1FC;
+    background:rgba(65, 217, 255, 0.151);
+
 }
 #spoilsForm
 label{
     font-family: 'Coda Caption';
     font-size:1.5em;
-    font-style: italic;;
+    font-style: italic;
+    margin:.75em;
+    color:#F3EA5F;
 }
+
 @media screen and (min-width:769px){
     #spoilsWrapper {
         display: grid;

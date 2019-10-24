@@ -4,14 +4,12 @@
     font-family: 'Coda Caption';
     padding:.6em;
 }
-
 .searchResultsArea:hover{
     text-decoration: none;
     background:#1C061D;
     border-radius:20%;
     color:#2BD1FC;
 }
-
 
 #posts a:visited{
     text-decoration:none;
