@@ -11,12 +11,13 @@ aside#theSpoils.wrapper
                 )
                     i.fas.fa-user-circle
                     p Profile
-        .navIcons     
-            button(
-                id="logOutButton"
-            )         
-                i.far.fa-share-square
-                p Log Out
+        .navIcons
+            a(href="/logout")      
+                button(
+                    id="logOutButton"
+                )         
+                    i.far.fa-share-square
+                    p Log Out
     #hot
         .asideHeader.fire
             i.fas.fa-fire-alt.fire 
