@@ -12,8 +12,9 @@ input{
 .loginBox{
     margin: auto;   
     text-align: center;
-    width:33%; 
+    width:85%; 
 }
+
 .loginBox
 h2{
     font-size:2em;
@@ -37,4 +38,17 @@ h2{
     padding-top: .75em;
     padding-bottom:.75em;
     font-style:italic;
+    color:gold;
 }
+@media screen and (min-width:760px){
+    .loginBox{
+        width:60%; 
+    }
+
+  }
+  @media screen and (min-width:1024px){
+    .loginBox{
+        width:33%; 
+    }
+    
+  }
