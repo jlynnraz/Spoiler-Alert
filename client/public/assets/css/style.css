@@ -38,6 +38,5 @@ h3{
   .halfWrapper{
     display: grid;
     grid-template-columns:auto 25%;
-  }
-  
+  } 
 }
