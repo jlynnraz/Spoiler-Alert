@@ -10,12 +10,13 @@ header
                         )
                         button#movieSearch.sbtn
                                 i.fas.fa-search
-                button(
-                        id="goProfile"
-                        class="sbtn"
-                )
-                        i.fas.fa-user-circle
-                        p Profile
+                a(href="/profile")
+                        button(
+                                id="goProfile"
+                                class="sbtn"
+                        )
+                                i.fas.fa-user-circle
+                                p Profile
                 
                 button(
                         d="logOutButton"
