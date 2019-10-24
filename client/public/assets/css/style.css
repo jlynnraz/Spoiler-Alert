@@ -6,7 +6,6 @@ purple #C04DF9;
 red #FF3F3F;
 grey #404E4D;
 */
-
 body{
   background:rgb(57, 44, 71);
 }
@@ -29,56 +28,6 @@ h3{
   color:#2BD1FC;
   background:#1C061D;
 }
-
-
-/* header */
-
-header{
-    display:grid;
-    grid-template-columns:2fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    background:#1C061D;
-    font-style: italic;
-    padding-top:2em;
-    padding-bottom:2em;
-    }
-
-header h1{
-    color:#FA83CE;
-    font-family: 'Coda Caption';
-    font-size:4.35em;
-    grid-column-start:1;
-    grid-column-end:2;
-    grid-row-start:1;
-    grid-row-end:3;
-    margin-left:2em;
-    -webkit-animation: glow 10s ease-in-out infinite alternate;
-    -moz-animation: glow 10s ease-in-out infinite alternate;
-    animation: glow 10s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #fff, 0 0 15px #e60073, 0 0 18px #e60073;
-    }
-    to {
-      text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px #ff4da6, 0 0 18px #ff4da6, 0 0 20px #ff4da6;
-    }
-  }
-header p{
-    color:#F1F5F2;
-    display: inline;
-    font-family: 'Overpass Mono', monospace;
-    font-weight: 800;
-    font-size:1.5em;
-}
-.sbtn{
-  background:none;
-  color: #2BD1FC;
-  border:none;
-}
-
-
-/* recommends but may change */
 @media screen and (min-width:760px){
   .halfWrapper{
     display: grid;
@@ -89,6 +38,5 @@ header p{
   .halfWrapper{
     display: grid;
     grid-template-columns:auto 25%;
-  }
-  
+  } 
 }

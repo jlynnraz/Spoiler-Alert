@@ -4,14 +4,12 @@
     font-family: 'Coda Caption';
     padding:.6em;
 }
-
 .searchResultsArea:hover{
     text-decoration: none;
     background:#1C061D;
     border-radius:20%;
     color:#2BD1FC;
 }
-
 
 #posts a:visited{
     text-decoration:none;
@@ -26,13 +24,25 @@
 }
 #posts{
     margin:auto;    
-    width:40%;
+    width:60%;
     color:#363732;
     text-decoration:none;
+    margin-bottom:1em;
 }
 .searchResultsArea{
-    font-size:1.35em;
-    text-align: center; 
-    padding:.5em;
-    margin-top:.5em;   
+    text-align: center;
+    font-size:1.15em;
+    padding:.25em;
+    margin-top:.25em; 
+}
+@media screen and (min-width:769px){
+    #posts{
+        width:70%;
+    }
+    .searchResultsArea{
+        font-size:1.35em;
+        padding:.25em;
+        margin-top:.25em;   
+
+    }
 }

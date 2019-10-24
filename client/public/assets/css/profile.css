@@ -1,49 +1,96 @@
-#nameBlock img{
-    border-radius: 50%;
-    border:#1C061D .25em solid;    
-    width:10em;
+.userWrapper{
+    width:90%;
+    margin:auto;
 }
-
-#nameBlock{
-    margin:1em 1em 1em 2em;
-}
-#nameBlock h2{
-    font-size:1.75em;
-    text-align: center;
-}
-#userWrapper{
-    display:flex;
-    width:80%;
-}
-
-#userProfile{
-    grid-column-start:1;
-    grid-column-end:2;
-}
-#top10,
-#bottom10{
-    margin-left:1em;
-}
-#top10 li,
-#bottom10 li{
-    font-size:1.5em;
-    color:red;
-    list-style: decimal;
-    margin-left:1.5em;
-}
-aside{
-    grid-column-start:2;
-}
-
-#userWrapper,
-aside{
-    background:rgb(168, 168, 168);
-}
-
-/* h3{
-    background:#1C061D;
-    color:#2BD1FC;
-    font-family: 'Overpass Mono', monospace;
+#userSpoils h3 {
     font-size:1.25em;
-    padding:.6em .4em;
-} */
+    padding:.5em;
+}
+#nameBlock {
+    display:inline-flex;
+    font-family: 'Coda Caption';
+    padding: 1em;
+    font-size:1.5em;
+    margin-bottom:.5em;
+}
+#nameBlock h2{    
+    padding-left:.25em;
+    padding-right:.25em;
+}
+#userSpoils li {
+    font-size:1.25em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    padding-left: 1em;
+}
+#userSpoils{
+    margin-bottom:.5em;
+}
+#userSpoils li:hover {
+    color: #2BD1FC;
+    background: #1C061D;
+}
+
+@media screen and (min-width:680px) {
+    .userWrapper {
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+        width:80%;
+    }
+    #nameBlock{
+        display:inline-flex;
+        font-size:1.5em;
+        margin-bottom:1em;
+    }
+    #userSpoils{
+        margin-bottom:1em;
+    }
+    #userSpoils h3 {
+        font-size:1.25em;
+        padding:.5em;
+    }
+    #userSpoils li {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width:1080px) {
+    .userWrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    #nameBlock {
+        font-size: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    #userSpoils {
+        width: 40%;
+    }
+    #userSpoils h3 {
+        font-size: 1.5em;
+        padding: .25em;
+    }
+    #userSpoils li {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    #nameBlock {
+        font-size: 2.5em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    #userSpoils {
+        width: 40%;
+    }
+    #userSpoils h3 {
+        font-size: 1.5em;
+        padding: .25em;
+    }
+    #userSpoils li {
+        font-size: 1.5em;
+    }
+}

@@ -1,11 +1,26 @@
 header
         h1 Spoiler Alert!
         p Discuss amongst yourselves
-        form(action="/searchresults", method="POST")
-                input(
-                        type="text"
-                        name="movieSearch"
-                        placeholder="search movies"
-                )
-                button#movieSearch.sbtn
-                        i.fas.fa-search
+        .searchBar
+                form(action="/searchresults", method="POST")
+                        input(
+                                type="text"
+                                name="movieSearch"
+                                placeholder="search movies"
+                        )
+                        button#movieSearch.sbtn
+                                i.fas.fa-search
+                a(href="/profile")
+                        button(
+                                id="goProfile"
+                                class="sbtn"
+                        )
+                                i.fas.fa-user-circle
+                                p Profile
+                
+                button(
+                        d="logOutButton"
+                        class="sbtn"
+                )         
+                        i.far.fa-share-square
+                        p Log Out

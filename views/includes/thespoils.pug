@@ -1,14 +1,15 @@
 
 #movieInfo.wrapper
-    img(src=movieInfo.Poster)
-    ul
-        li Title: #{movieInfo.Title}
-        li Year: #{movieInfo.Year}
-        li Staring: #{movieInfo.Actors}
-        li Directed by: #{movieInfo.Director}
-        li Rated: #{movieInfo.Rated}
-        li #{movieInfo.Plot}
-        li Awards #{movieInfo.Awards}
+    img(class="poster" src=movieInfo.Poster)
+    .movieDetails
+        ul
+            li Title: #{movieInfo.Title}
+            li Year: #{movieInfo.Year}
+            li Staring: #{movieInfo.Actors}
+            li Directed by: #{movieInfo.Director}
+            li Rated: #{movieInfo.Rated}
+            li #{movieInfo.Plot}
+            li Awards #{movieInfo.Awards}
 #discussion
     #discussionBlock
         h2 #{spoilsInfo.name}    

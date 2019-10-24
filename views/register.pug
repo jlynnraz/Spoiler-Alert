@@ -2,9 +2,12 @@ extends layout.pug
 
 block content
     section#content
-        #discussion
-            h2 Register Account
-            form
+        .loginBox.wrapper
+            h2 Welcome to Spoiler Alert!
+            p A place to talk about your favorite movies without fear of spoiling it for your friends!
+             p By creating an account you agree to our terms and conditions
+            form#loginForm
+                h3 Create your Account!
                 input(
                     type="text"
                     name="username"
@@ -17,5 +20,6 @@ block content
                     id="password"
                     label="Password"
                 )
-                button#joinSubmit Join
+                button#joinSubmit.subBtn
+                    i.fas.fa-hands-helping  Sign Up!
     script(src='/assets/js/register.js')
