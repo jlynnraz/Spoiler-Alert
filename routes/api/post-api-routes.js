@@ -12,12 +12,10 @@ module.exports = function (app) {
                 res.json(dbPost);
             });
         };
-        console.log("Hiii");
         res.json(queryObj)
     })
 
     app.get("/api/posts/:movies", function (req, res) {
-        console.log(req.params.movies)
         db.Post.findOne({
             name: [db.name],
             where: {
@@ -37,7 +35,6 @@ module.exports = function (app) {
     })
 
     app.put("/api/thespoils/:id", function (req, res) {
-        
         db.Post.update(req.body, {
             where: {
                 id: req.params.id
@@ -48,7 +45,6 @@ module.exports = function (app) {
     })
 
     app.delete("/api/thespoils/:id", function (req, res) {
-        console.log("hello")
         db.Post.destroy({
             where: {
                 id: req.params.id
