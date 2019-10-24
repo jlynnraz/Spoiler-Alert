@@ -1,58 +1,24 @@
-#spoilsWrapper {
-    display: grid;
-    grid-template-columns:26% 1fr 25%;
+.poster{
+    display:block;
+    width: 150px;    
+    margin:.5em;   
 }
-
-#movieInfo{
-    grid-column-start: 1;
-    grid-column-end: 2; 
+.movieDetails{
     font-size:1.25em;
-    margin-left:1em;
-    padding:.5em;
-}
-
-#movieInfo img{    
-    margin:auto;
-}
-
-#discussion {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-#movieInfo li{
     padding-top:.25em;
 }
-
-#aside {
-    grid-column-start: 3;
-    grid-column-end: 4;
+#movieInfo{
+    display:flex;
 }
-
-#discussion h2 {
-    font-size: 4em;
-    text-align: center;
-    padding:.25em;
-}
-
 #commentBlock {
     background: rgb(221, 205, 205);
     border: black .25em solid;
-    margin: auto; 
-    width: 75%;  
-}
-
-#talk {
-    font-size: 1.05em;
-    padding: 1em;
+    margin: auto;  
 }
 
 #author {
     color: #2BD1FC;
-    font-size: 1.25em;
     text-align: right;
-    padding: .3em 1em;
-    width: 35%;
 }
 
 #author{
@@ -94,4 +60,88 @@ label{
     font-family: 'Coda Caption';
     font-size:1.5em;
     font-style: italic;;
+}
+@media screen and (min-width:769px){
+    #spoilsWrapper {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 500px 1fr;
+    }
+    #discussion {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start:1;
+        grid-row-end:2;
+    }.movieDetails{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end:3; 
+        font-size:1.25em;
+        margin-left:1em;
+        padding:.5em;
+    }
+    #aside {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+    .poster{
+        display:block;
+        width: 95%;    
+        margin:auto;
+        margin-top:.25em;
+    }
+    #movieInfo{
+        display:block;
+    }
+}
+@media screen and (min-width:1080px){
+    #spoilsWrapper {
+        display: grid;
+        grid-template-columns:26% 1fr 25%;
+        grid-template-rows:1fr;
+    }
+    .movieDetails{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end:2;  
+        font-size:1.25em;
+        margin-left:1em;
+        padding:.5em;
+    }
+    #discussion {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1;
+        grid-row-end:2; 
+    }
+    #aside {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start:1;
+        grid-row-end:2; 
+    }
+        #movieInfo li{
+        padding-top:.25em;
+    }      
+    #discussion h2 {
+        font-size: 4em;
+        text-align: center;
+        padding:.25em;
+    }
+    #commentBlock {
+        margin: auto; 
+        width: 75%;  
+    }
+    #talk {
+        font-size: 1.05em;
+        padding: 1em;
+    }#author {
+        font-size: 1.25em;  
+        padding: .3em 1em;
+        width: 35%;
+    }
 }
