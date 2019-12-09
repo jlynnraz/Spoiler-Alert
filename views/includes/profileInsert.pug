@@ -1,14 +1,11 @@
--const bottom10Movies=["Doom","The Gray", "A Man with a Camera", "Daybreak", "Spaceballs"]
 
 #userProfile 
     .userWrapper
         #nameBlock.wrapper             
             h2 #{username}            
         #userSpoils.wrapper
-            h3.pbWrapper #{username} Spoils!
+            h3.pbWrapper #{username} Spoils!          
             ul
-                each bottom10Movie in bottom10Movies
-                    li=bottom10Movie
-            ul
-                each movie in movies
-                    li=movie.name
+                //- each spoiledMovie in spoiledMovies
+                - for (var i=spoiledMovies.length;i>spoiledMovies.length-6;i--)
+                  li=spoiledMovies[i]

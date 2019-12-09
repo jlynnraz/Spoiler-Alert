@@ -39,5 +39,11 @@ module.exports = {
     });
     console.log('test');
     res.send(200).end();
+  },
+  recentSpoils: function(req, res){
+    db.Post.findAll()
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   }
 };
