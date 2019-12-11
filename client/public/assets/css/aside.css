@@ -1,45 +1,68 @@
-.aside3{
-    background:#1C061D;
-    color:#2BD1FC;
-  }
-  #theSpoils li{
-    font-size:1.25em;
-    padding:.25em;
-  }
-  #theSpoils{
-    margin-right:1em;
-  } 
-  #navbar{
-    padding:.5em;
-    font-size:1.5em;
-    display:flex;
-    flex-wrap:none;
-  }
-  .asideHeader{
-    display: flex;
-  }
-  .fa-user-circle,
-  .fa-share-square {
-    padding-left:1em;
-    padding-right:1em;
-  }
-  .navIcons{
-    font-size:2.15em;  
-  }
-  #navbar button{
-      background:none;
-      border:none;
-      color:#2BD1FC;
-  }
-  .asideHeader{
-    font-size:1.5em;
-    padding:.5em;
-  }
-  .fire {
-  background:#1C061D;
-  color:#FF3F3F;
-  }
-  .mySpoils{
-    background:#1C061D;
-    color: #F3EA5F
-  }
+.aside3 {
+  background: #1C061D;
+  color: #2BD1FC;
+}
+
+#theSpoils a {
+  font-size: .75em;
+  padding: .25em;
+  text-decoration: none;
+}
+
+#theSpoils {
+  margin-right: 1em;
+  line-height: 1.75em;
+}
+
+#navbar {
+  padding: .5em;
+  font-size: 1.5em;
+  display: flex;
+  flex-wrap: none;
+}
+
+.asideHeader {
+  display: flex;
+}
+
+.fa-user-circle, .fa-share-square {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.navIcons {
+  font-size: 2.15em;
+}
+
+#navbar button {
+  background: none;
+  border: none;
+  color: #2BD1FC;
+}
+
+.asideHeader {
+  font-size: 1.5em;
+  padding: .5em;
+}
+
+.fire {
+  background: #1C061D;
+  color: #FF3F3F;
+}
+
+.fire a {
+  color: #FF3F3F;
+}
+
+.mySpoils {
+  background: #1C061D;
+  color: #F3EA5F
+}
+
+.mySpoils a {
+  color: #F3EA5F
+}
+
+.aside3 a {
+  color: #2BD1FC;
+}

@@ -1,5 +1,4 @@
 const router = require("express").Router();
-// const moviesController = require("../controllers/spoilerController");
 var path = require("path");
 const pug = require('pug');
 var axios = require('axios');
@@ -11,7 +10,6 @@ module.exports = function (app) {
 
     // index route loads view.html
     app.get("/", function (req, res) {
-        //res.sendFile(path.join(__dirname, "../views/html/index.html"));
         res.render('index', { user: req.user });
     });
     // routes added by matt
@@ -59,15 +57,7 @@ module.exports = function (app) {
                 movies: result.Movies,
                 spoiledMovies: spoiledMovies
             });
-        }).then(function(){
-            axios.get(`http://www.omdbapi.com/?apikey=${process.env.OMDB_KEY}&s=${req.body.movieSearch}`)
-            .then(function (response) {
-                var movies = response.data.Search;
-            res.render('searchresults', { movies: movies }) 
-            }).catch(function (err) {
-                if (err) throw err
-            })   
-        })
+        });
     });
 
     app.get('/logout', function (req, res) {
@@ -82,7 +72,7 @@ module.exports = function (app) {
             res.render('searchresults', { movies: movies })
         }).catch(function (err) {
             if (err) throw err
-        })     
+        })
     });
 
     app.get("/thespoils/:id", function (req, res) {
@@ -101,12 +91,10 @@ module.exports = function (app) {
                 }]
             }).spread(function (movie, created) {
                 const data = { spoilsInfo: movie, movieInfo: movieInfo, user: req.user };
-                // console.log(movie);
                 return res.render('thespoils', data);
             })
         }).catch(function (err) {
             if (err) throw err
         })
-        // res.render(200).end();
     });
 };

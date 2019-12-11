@@ -1,5 +1,4 @@
--const trendingMovies=["Zombieland 2", "EndGame", "Spiderman: Far from home."]
--const recommendMovies=["Zombieland 2", "Gemini Man","Rambo: Last Blood"]
+
 aside#theSpoils.wrapper
     #navbar.pbWrapper
         .navIcons
@@ -20,20 +19,32 @@ aside#theSpoils.wrapper
         .asideHeader.fire
             i.fas.fa-fire-alt.fire 
             h3.fire Whats Hot!
-        ol 
-            each trendingMovie in trendingMovies
-                li=trendingMovie
+                ol
+                    li
+                        a(href="/thespoils/tt4154796") Avengers: Endgame    
+                    li
+                        a(href="/thespoils/tt01203382") Titanic   
+                    li
+                        a(href="/thespoils/tt0106140") Sonic The Hedge Hog 
     #userSpoilsBar
         .asideHeader.mySpoils
             i.far.fa-comments
-            h3.mySpoils Your Spoils!
-        //- ol             
-        //-     - for (var i=spoiledMovies.length;i>spoiledMovies.length-4;i--)
-        //-       li=spoiledMovies[i]
+            h3.mySpoils Soon To Spoil!
+                ol
+                    li
+                        a(href="/thespoils/tt2527338") Star Wars: The Rise of Skywalker    
+                    li
+                        a(href="/thespoils/tt6673612") DoLittle   
+                    li
+                        a(href="/thespoils/tt3794354") Sonic The Hedge Hog    
     #recommends
         .asideHeader.aside3
             i.far.fa-thumbs-up
             h3.aside3 Check Out These Movies!
-        ol
-            each recommendMovie in recommendMovies
-                li=recommendMovie
+                ol
+                    li
+                        a(href="/thespoils/tt7975244") Jumanji: The Next Level    
+                    li
+                        a(href="/thespoils/tt4520988") Frozen II   
+                    li
+                        a(href="/thespoils/tt8946378") Knives Out

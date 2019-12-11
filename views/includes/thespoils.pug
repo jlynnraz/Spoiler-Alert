@@ -1,25 +1,10 @@
-// - var user=
+
 #movieInfo.wrapper
-    img(class="poster" src=movieInfo.Poster)
-    <h4>Rate It!
-    select
-        option(value="1") 1 Hate it!
-        option(value="2") 2
-        option(value="3") 3
-        option(value="4") 4
-        option(value="5") 5
-        option(value="6") 6
-        option(value="7") 7
-        option(value="8") 8
-        option(value="9") 9
-        option(value="10") 10 Love It
-    submit(
-        class="submitRating"
-        id="submitUserRating"
-    ) submit  
+    img(class="poster" src=movieInfo.Poster)    
     .movieDetails
         ul
             h2 #{movieInfo.Title}
+            li #{movieInfo.imdbRating}/10
             li Year: #{movieInfo.Year}
             li Staring: #{movieInfo.Actors}
             li Directed by: #{movieInfo.Director}
@@ -38,20 +23,20 @@
                             id="post-"+post.id
                         ) #{post.content}
                         #authorBar
-                            if post.User.id===id
-                                #editBlock        
-                                    button(
-                                            class="ibtn edit"
-                                            data-postId=""+post.id
-                                    )
-                                        i.fas.fa-edit  Edit
-                                    button(
-                                            class="ibtn delete"
-                                            data-postId=post.id)
-                                        i.fas.fa-trash-alt  Delete
-                                #author #{post.User.username}
-                            else    
-                                #author #{post.User.username}
+                            //- if user=username
+                            //-     #editBlock        
+                            //-         button(
+                            //-                 class="ibtn edit"
+                            //-                 data-postId=""+post.id
+                            //-         )
+                            //-             i.fas.fa-edit  Edit
+                            //-         button(
+                            //-                 class="ibtn delete"
+                            //-                 data-postId=post.id)
+                            //-             i.fas.fa-trash-alt  Delete
+                            //-     #author #{post.User.username}
+                            //- else    
+                            #author #{post.User.username}
             #inputform
                 form#spoilsForm
                     label Spoil Here!
