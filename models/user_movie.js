@@ -3,7 +3,11 @@ module.exports = function (sequelize, DataTypes) {
         rating: {
             type: DataTypes.INTEGER,
             allowNull: true,
-        }
+        },
+        // like:{
+        //     boolean:DataTypes.false,
+        //     allowNull:true
+        // }
     });
     
     return UserMovie;

@@ -7,9 +7,26 @@
     font-size:1.25em;
     padding-top:.25em;
 }
+.movieDetails h2{
+    font-size:2.25em;
+    padding-bottom:.15em
+}
+.movieDetails li{
+    padding-bottom:.25em
+    
+}
 #movieInfo{
     display:flex;
     margin-left:.5em;
+}
+.commentBox{    
+    background:rgba(43, 210, 252, 0.589);
+    margin:.5em
+}
+.talk{
+    font-size: 1.25em;
+    padding: .5em;
+    width:75%;
 }
 #commentBlock {
     background: rgb(221, 205, 205);
@@ -23,7 +40,6 @@
     padding:1.25 1.5em;
     background: #1C061D;
 }
-
 
 #authorBar {
     display: flex;
@@ -51,21 +67,34 @@
 .ibtn:hover {
     background-color: rgb(22, 98, 168);
 }
-
+#postButton, #reply{
+    margin-left: 1.7em
+}
+#reply{
+    margin-bottom:.5em;
+}
 #spoilsForm
 textarea{
-    width:97%;
+    width:90%;
+    display:block;
     border-color:#2BD1FC;
-    background:rgba(65, 217, 255, 0.151);
+    background:rgba(43, 210, 252, 0.589);
+    font-size:1.25em;
+    margin: auto;
+    padding:.5em;
+    margin-top:1em;
+    margin-bottom:.75em;
+    font-family: 'Georgia';
 
 }
 #spoilsForm
 label{
     font-family: 'Coda Caption';
-    font-size:1.5em;
+    font-size:2.5em;
     font-style: italic;
     margin:.75em;
     color:#F3EA5F;
+    margin-bottom:2em;
 }
 
 @media screen and (min-width:769px){

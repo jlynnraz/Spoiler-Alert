@@ -9,7 +9,9 @@ grey #404E4D;
 body{
   background:rgb(57, 44, 71);
 }
-
+#content{
+  min-height: calc(100vh - 360px);
+}
 h2{
   color: #F3EA5F;
 }
