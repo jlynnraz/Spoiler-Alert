@@ -5,7 +5,6 @@
             h2 #{username}            
         #userSpoils.wrapper
             h3.pbWrapper #{username} Spoils!          
-            ul
-                //- each spoiledMovie in spoiledMovies
+            ul 
                 - for (var i=spoiledMovies.length;i>spoiledMovies.length-6;i--)
-                  li=spoiledMovies[i]
+                    li=spoiledMovies[i]

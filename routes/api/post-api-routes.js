@@ -16,16 +16,6 @@ module.exports = function (app) {
         console.log("Hiii");
         res.json(queryObj)
     })
-    // recent
-    app.get("/api/posts", function (req, res) {     
-            db.Post.recentSpoils({
-                              
-            }).then(function (dbPost) {
-                res.json(dbPost);
-            });       
-        console.log("xxx");
-       
-    })
 
     app.get("/api/posts/:movies", function (req, res) {
         console.log(req.params.movies)

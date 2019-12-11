@@ -1,10 +1,13 @@
 #searchArea
     #posts.wrapper
         h2.searchTitle Search Results
-        ul
+        .searchResultsWrapper
             each movie in movies
                 -const imdbID=movie.imdbID
-                .searchResultsArea
-                    a(href=`/thespoils/` + imdbID)
-                        li=movie.Title
-                        li=movie.Year
+                a(href=`/thespoils/` + imdbID)
+                    .searchResultsArea
+                        .movieDetails                            
+                            h3=movie.Title
+                            p=movie.Year                           
+                        .searchImg                            
+                            img(src=movie.Poster)

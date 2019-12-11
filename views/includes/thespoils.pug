@@ -1,4 +1,4 @@
-
+// - var user=
 #movieInfo.wrapper
     img(class="poster" src=movieInfo.Poster)
     <h4>Rate It!
@@ -19,7 +19,7 @@
     ) submit  
     .movieDetails
         ul
-            li Title: #{movieInfo.Title}
+            h2 #{movieInfo.Title}
             li Year: #{movieInfo.Year}
             li Staring: #{movieInfo.Actors}
             li Directed by: #{movieInfo.Director}
@@ -32,23 +32,26 @@
         #commentBlock
             if spoilsInfo.Posts
                 each post in spoilsInfo.Posts
-                    #post
+                    #post.commentBox
                         div(
                             class="talk"
                             id="post-"+post.id
                         ) #{post.content}
                         #authorBar
-                            #editBlock        
-                                button(
-                                        class="ibtn edit"
-                                        data-postId=""+post.id
-                                )
-                                    i.fas.fa-edit  Edit
-                                button(
-                                        class="ibtn delete"
-                                        data-postId=post.id)
-                                    i.fas.fa-trash-alt  Delete
-                            #author #{post.User.username}
+                            if post.User.id===id
+                                #editBlock        
+                                    button(
+                                            class="ibtn edit"
+                                            data-postId=""+post.id
+                                    )
+                                        i.fas.fa-edit  Edit
+                                    button(
+                                            class="ibtn delete"
+                                            data-postId=post.id)
+                                        i.fas.fa-trash-alt  Delete
+                                #author #{post.User.username}
+                            else    
+                                #author #{post.User.username}
             #inputform
                 form#spoilsForm
                     label Spoil Here!

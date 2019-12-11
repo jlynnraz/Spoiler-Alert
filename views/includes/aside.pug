@@ -1,7 +1,5 @@
 -const trendingMovies=["Zombieland 2", "EndGame", "Spiderman: Far from home."]
--const userRecentSpoils=["John Wick: Chapter 3 Parabellum", "Adams Family", "Joker"]
 -const recommendMovies=["Zombieland 2", "Gemini Man","Rambo: Last Blood"]
-
 aside#theSpoils.wrapper
     #navbar.pbWrapper
         .navIcons
@@ -29,9 +27,9 @@ aside#theSpoils.wrapper
         .asideHeader.mySpoils
             i.far.fa-comments
             h3.mySpoils Your Spoils!
-        ol
-            each userRecentSpoil in userRecentSpoils
-                li=userRecentSpoil
+        //- ol             
+        //-     - for (var i=spoiledMovies.length;i>spoiledMovies.length-4;i--)
+        //-       li=spoiledMovies[i]
     #recommends
         .asideHeader.aside3
             i.far.fa-thumbs-up

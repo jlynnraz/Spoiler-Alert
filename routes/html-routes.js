@@ -59,7 +59,15 @@ module.exports = function (app) {
                 movies: result.Movies,
                 spoiledMovies: spoiledMovies
             });
-        });
+        }).then(function(){
+            axios.get(`http://www.omdbapi.com/?apikey=${process.env.OMDB_KEY}&s=${req.body.movieSearch}`)
+            .then(function (response) {
+                var movies = response.data.Search;
+            res.render('searchresults', { movies: movies }) 
+            }).catch(function (err) {
+                if (err) throw err
+            })   
+        })
     });
 
     app.get('/logout', function (req, res) {
@@ -74,8 +82,7 @@ module.exports = function (app) {
             res.render('searchresults', { movies: movies })
         }).catch(function (err) {
             if (err) throw err
-        })
-        // res.render('searchresults', { user: req.user }).end();
+        })     
     });
 
     app.get("/thespoils/:id", function (req, res) {
